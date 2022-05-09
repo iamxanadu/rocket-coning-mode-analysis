@@ -1,0 +1,27 @@
+[mass]
+I = 0.847913333 # kg-m^2
+Ixx = 0.02916   # kg-m^2
+m = 20          # kg
+
+[shape]
+Cnalpha = -1.0 # restoring moment coefficient derivative at zero AoA
+Cmalpha = 1.0  # magnus moment coefficient derivative at zero AoA
+A = 0.032      # m^2 --- reference area
+d = 0.2        # m --- reference length
+
+[freestream]
+v = 300     # m-s^-1
+rho = 1.225 # kg-m^-3
+
+[parameters]
+alpha_max = 15    # degrees
+alpha_step = 1000
+omega_max = 30    # rad-s^-1
+omega_step = 1000
+
+[model]
+path = '/home/ametalorb/Code/scratch/coning-mode/rocket.stl'
+
+[simulation]
+dt = 0.01       # s
+alpha_stop = 50 # deg --- alpha at which we stop the simulation cause we have gone unstable
